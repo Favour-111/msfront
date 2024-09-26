@@ -18,7 +18,9 @@ function Cart() {
   const getALlProduct = async () => {
     try {
       SetLoader(true);
-      const response = await axios.get(`http://localhost:5000/getalProducts`);
+      const response = await axios.get(
+        `https://mernback-1-221g.onrender.com/getalProducts`
+      );
       if (response) {
         setProduct(response.data.response);
       }
@@ -141,7 +143,7 @@ function Cart() {
                     <div className="cartItms">
                       <div className="img d-flex">
                         <img
-                          src={`http://localhost:5000/uploads/${itm.image}`}
+                          src={`https://mernback-1-221g.onrender.com/uploads/${itm.image}`}
                           alt={itm.Pname}
                         />
                         <div className="ms-3">

@@ -17,7 +17,9 @@ const Trending = ({ Store }) => {
   const getAllProduct = async () => {
     try {
       SetLoader(true);
-      const response = await axios.get(`http://localhost:5000/getalProducts`);
+      const response = await axios.get(
+        `https://mernback-1-221g.onrender.com/getalProducts`
+      );
       if (response) {
         setProduct(response.data.response);
       } else {
@@ -33,7 +35,7 @@ const Trending = ({ Store }) => {
   useEffect(() => {
     getAllProduct();
 
-    const socket = io("http://localhost:5000");
+    const socket = io("https://mernback-1-221g.onrender.com");
 
     // Listen for real-time updates (product added or deleted)
     socket.on("productAdded", (newProduct) => {
@@ -92,7 +94,7 @@ const Trending = ({ Store }) => {
             <IoClose className="cancel mb-2" />
           </div>
           <img
-            src={`http://localhost:5000/uploads/${selectedProduct.image}`}
+            src={`https://mernback-1-221g.onrender.com/uploads/${selectedProduct.image}`}
             alt={selectedProduct.Pname}
           />
           <div className="name">{selectedProduct.Pname}</div>
@@ -140,7 +142,7 @@ const Trending = ({ Store }) => {
               <div className="Trending_Product_container" key={index}>
                 <div className="image-container mt-4">
                   <img
-                    src={`http://localhost:5000/uploads/${item.image}`}
+                    src={`https://mernback-1-221g.onrender.com/uploads/${item.image}`}
                     className=""
                     alt={item.Pname}
                   />

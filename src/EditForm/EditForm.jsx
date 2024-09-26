@@ -47,7 +47,7 @@ const EditForm = () => {
     try {
       setIsloading(true);
       const response = await axios.put(
-        `http://localhost:5000/products/${id}`,
+        `https://mernback-1-221g.onrender.com/products/${id}`,
         formData
       );
       console.log(response);
@@ -73,7 +73,9 @@ const EditForm = () => {
   //function for getting SingleProduct
   const getProduct = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/products/${id}`);
+      const response = await axios.get(
+        `https://mernback-1-221g.onrender.com/products/${id}`
+      );
       const res = response.data.response;
       setForm({
         Pname: res.Pname,
@@ -207,7 +209,7 @@ const EditForm = () => {
                       <div className="image-uploader-div">
                         <img
                           width={50}
-                          src={`http://localhost:5000/uploads/${form.image}`} // Make sure the correct URL is used
+                          src={`https://mernback-1-221g.onrender.com/uploads/${form.image}`} // Make sure the correct URL is used
                           alt="product"
                         />
                       </div>

@@ -15,7 +15,9 @@ function WishList() {
   const getALlProduct = async () => {
     try {
       SetLoader(true);
-      const response = await axios.get(`http://localhost:5000/getalProducts`);
+      const response = await axios.get(
+        `https://mernback-1-221g.onrender.com/getalProducts`
+      );
       if (response) {
         setProduct(response.data.response);
       }
@@ -66,7 +68,7 @@ function WishList() {
                         <div className="d-flex gap-2 w-sm-75 w-md-50 ">
                           <div>
                             <img
-                              src={`http://localhost:5000/uploads/${product.image}`}
+                              src={`https://mernback-1-221g.onrender.com/uploads/${product.image}`}
                               width={40}
                               alt=""
                             />

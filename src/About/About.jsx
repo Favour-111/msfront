@@ -15,7 +15,9 @@ const About = () => {
   const getAllReviews = async () => {
     try {
       setLoader(true);
-      const response = await axios.get("http://localhost:5000/allReivew");
+      const response = await axios.get(
+        "https://mernback-1-221g.onrender.com/allReivew"
+      );
       setReview(response.data.message);
     } catch (error) {
       console.log(error.message);

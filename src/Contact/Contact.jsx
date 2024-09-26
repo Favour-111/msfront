@@ -26,7 +26,10 @@ const Contact = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/review", form);
+      const response = await axios.post(
+        "https://mernback-1-221g.onrender.com/review",
+        form
+      );
       if (response) {
         swal({
           title: "Success!",

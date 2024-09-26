@@ -121,7 +121,7 @@ const Payment = () => {
     try {
       setLoader(true);
       const response = await axios.post(
-        "http://localhost:5000/PostOrder",
+        "https://mernback-1-221g.onrender.com/PostOrder",
         formData,
         {
           headers: {

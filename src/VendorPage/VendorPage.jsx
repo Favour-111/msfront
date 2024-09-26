@@ -37,7 +37,9 @@ const VendorPage = ({ Store }) => {
   const getALlProduct = async () => {
     try {
       SetLoader(true);
-      const response = await axios.get(`http://localhost:5000/getalProducts`);
+      const response = await axios.get(
+        `https://mernback-1-221g.onrender.com/getalProducts`
+      );
       console.log(response);
       if (response) {
         SetCollection(response.data.response);
@@ -75,7 +77,9 @@ const VendorPage = ({ Store }) => {
   //delete product function
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/delete/${id}`);
+      const response = await axios.delete(
+        `https://mernback-1-221g.onrender.com/delete/${id}`
+      );
       if (response) {
         // Filter out the deleted item from the collection
         SetCollection((prevCollection) =>
@@ -303,7 +307,7 @@ const VendorPage = ({ Store }) => {
                         <tr className="rounded bg-light  h-100">
                           <td className="imageView">
                             <img
-                              src={`http://localhost:5000/uploads/${item.image}`}
+                              src={`https://mernback-1-221g.onrender.com/uploads/${item.image}`}
                               alt={item.name}
                               height={50}
                             />

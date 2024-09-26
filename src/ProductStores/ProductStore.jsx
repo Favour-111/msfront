@@ -19,7 +19,9 @@ const ProductStore = ({ Store }) => {
   const getAllProduct = async () => {
     try {
       SetLoader(true);
-      const response = await axios.get(`http://localhost:5000/getalProducts`);
+      const response = await axios.get(
+        `https://mernback-1-221g.onrender.com/getalProducts`
+      );
       if (response) {
         setProduct(response.data.response);
       } else {
@@ -35,7 +37,7 @@ const ProductStore = ({ Store }) => {
   useEffect(() => {
     getAllProduct();
 
-    const socket = io("http://localhost:5000");
+    const socket = io("https://mernback-1-221g.onrender.com");
 
     // Listen for real-time updates (product added or deleted)
     socket.on("productAdded", (newProduct) => {

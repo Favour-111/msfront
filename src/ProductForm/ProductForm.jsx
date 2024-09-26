@@ -48,7 +48,7 @@ const ProductForm = ({ Store }) => {
     try {
       setIsloading(true);
       const response = await axios.post(
-        "http://localhost:5000/products",
+        "https://mernback-1-221g.onrender.com/products",
         formData
       );
       if (response) {

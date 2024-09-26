@@ -47,7 +47,7 @@ function Items(props) {
             <IoClose className="cancel mb-2" />
           </div>
           <img
-            src={`http://localhost:5000/uploads/${selectedProduct.image}`}
+            src={`https://mernback-1-221g.onrender.com/uploads/${selectedProduct.image}`}
             alt={selectedProduct.Pname}
           />
           <div className="name">{selectedProduct.Pname}</div>
@@ -81,7 +81,7 @@ function Items(props) {
       <div className="List" key={id}>
         <div>
           <img
-            src={`http://localhost:5000/uploads/${image}`}
+            src={`https://mernback-1-221g.onrender.com/uploads/${image}`}
             alt=""
             className="product_img"
           />

@@ -22,7 +22,9 @@ const ShopContext = (props) => {
   const [all_product, setProduct] = useState([]);
   const getALlProduct = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/getalProducts`);
+      const response = await axios.get(
+        `https://mernback-1-221g.onrender.com/getalProducts`
+      );
       if (response) {
         setProduct(response.data.response);
       }

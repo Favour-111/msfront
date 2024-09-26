@@ -1,0 +1,199 @@
+:root {
+  --font: "Inter", sans-serif;
+  --shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.09);
+  --nav-text-color: #233d63;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.information {
+  background-color: #181c14;
+  div {
+    font-size: 14.35px;
+    font-weight: bold;
+    font-family: var(--font);
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+.nav-position_container {
+  position: fixed;
+  z-index: 100000000;
+  background-color: white;
+  top: 3;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+.nav_container {
+  padding: 20px;
+  height: 70px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 150px;
+  }
+}
+.Navigation_Container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  ul {
+    display: flex;
+    gap: 30px;
+    li {
+      list-style-type: none;
+      .Link {
+        text-decoration: none;
+        color: var(--nav-text-color);
+        font-weight: 500;
+        font-size: 17px;
+        transition: 250ms;
+      }
+      .Link:hover {
+        color: #b8001f;
+      }
+    }
+  }
+}
+.Cart_COunt {
+  background-color: red;
+  border-radius: 100%;
+  text-align: center;
+  padding: 0 5px;
+  color: white;
+  font-weight: bold;
+  font-family: var(--font);
+  font-size: 10px;
+}
+.nav-sm {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .nav-position_container {
+    display: none;
+  }
+  .nav-sm {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    background-color: white;
+  }
+  .information-sm {
+    background-color: #181c14;
+    div {
+      font-size: 9px;
+      font-weight: bold;
+      font-family: var(--font);
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+  .nav-logo-sm {
+    width: 150px;
+  }
+  .nav-cont-sm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+  }
+  .navigation-box-sm {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    transition: 250ms;
+  }
+  .navigation-box-sm-active {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    transition: 250ms;
+    background-color: white;
+  }
+  .Navigation_Container_sm {
+    margin-top: 10px;
+    padding: 10px 30px 0 10px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        height: 50px;
+        list-style-type: none;
+        margin-top: 10px;
+        .Link_sm {
+          border-radius: 10px;
+          height: 50px;
+          padding: 0 10px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.027);
+          color: var(--nav-text-color);
+          font-family: var(--font);
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+      .wishlistandcart {
+        border-radius: 10px;
+        height: 50px;
+        padding: 0 10px;
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.027);
+        color: var(--nav-text-color);
+        font-family: var(--font);
+        font-weight: bold;
+        text-decoration: none;
+        justify-content: space-between;
+        .Cart_COunt-sm {
+          background-color: red;
+          padding: 3px 8px;
+          color: white !important;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .close-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

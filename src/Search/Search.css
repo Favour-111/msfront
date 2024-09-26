@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.Description {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  color: #fff;
+  font-family: "Inter", sans-serif !important;
+}
+
+.Search_Container {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px !important;
+  background-color: #a4161bb1;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 0;
+}
+
+.input_box {
+  width: 500px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #1c1c1c28 !important;
+}
+.Category {
+  display: flex;
+  /* align-items: center; */
+  gap: 50px;
+  margin-top: 30px;
+}
+.category_Items img {
+  width: 40px;
+}
+.Category_container {
+  margin-left: 20px;
+  /* background-color: aqua; */
+  border-radius: 10px;
+  box-shadow: -4px 6px 6px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  height: 400px;
+  margin-top: 30px;
+}
+.category_Items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif !important;
+}
+.Recent_Product_container {
+  padding: 20px;
+}
+
+.Recent_Items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.search_display {
+  display: none;
+}
+.Search_displayOpen {
+  display: block !important;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10000;
+}
+.search_Display_Cont {
+  width: 100%;
+  background-color: #a4161bb1;
+  padding-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.Display_container {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.back {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  transition: 0.3s;
+}
+.back:hover {
+  background-color: rgba(0, 0, 0, 0.185);
+  border-radius: 50%;
+}
+
+.Display_container_Items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Display_container .wishListBtn {
+  margin: -20px !important;
+}
+@media screen and (max-width: 768px) {
+  .input_box {
+    width: 350px;
+  }
+  .Description {
+    font-size: 14px;
+  }
+
+  .Category {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .input_box {
+    width: 310px;
+  }
+}

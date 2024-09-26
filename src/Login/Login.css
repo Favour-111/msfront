@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.logo {
+  width: 200px;
+}
+.Form_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.Vendor-click {
+  background-color: rgba(0, 0, 0, 0.721);
+  transition: 250ms;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.Vendor-click:hover {
+  opacity: 0.4;
+}
+.Form_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 30px;
+}
+.button:hover {
+  background-color: #b32f34;
+}
+.Head {
+  font-weight: bold;
+  font-size: 30px !important;
+}
+.lottiefiles {
+  width: 500px;
+  height: 300px;
+}
+@media screen and (max-width: 848px) {
+  .Form_container {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .form-group {
+    margin-left: 10px;
+  }
+  .lottiefiles {
+    width: 100%;
+    height: 300px;
+  }
+  .Head {
+    font-size: 20px !important;
+  }
+}

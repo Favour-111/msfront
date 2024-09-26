@@ -1,0 +1,38 @@
+.netflix-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.netflix-letter {
+  font-size: 8vw; /* Responsive font size */
+  color: #a4161b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  display: inline-block;
+  animation: fadeInUp 0.8s forwards ease-in-out; /* Smoother individual letter animation */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make sure the text scales well on smaller screens */
+@media (max-width: 600px) {
+  .netflix-letter {
+    font-size: 10vw; /* Larger text size for small screens */
+  }
+}

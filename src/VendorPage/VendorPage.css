@@ -1,0 +1,118 @@
+:root {
+  --font: "Inter", sans-serif;
+  --shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.09);
+  --text-color: #181c14;
+  --default-color: #a4161bc0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  .vendor-login-head {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 30px;
+    color: var(--text-color);
+    font-family: var(--font);
+  }
+  .vendor-login-container {
+    width: 400px;
+    padding: 20px;
+  }
+  .Vendor-login-submit {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #181c1418;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: var(--font);
+    color: var(--text-color);
+    font-weight: 600;
+    transition: 250ms;
+  }
+  .Vendor-login-submit:hover {
+    background-color: var(--default-color);
+    color: white;
+  }
+}
+.collection-header {
+  font-weight: 800;
+  font-size: 28.5px;
+  font-family: "Montserrat", sans-serif;
+}
+input {
+  outline: none;
+  border: none;
+}
+table {
+  width: 100%;
+}
+.collection-body {
+  padding: 10px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.collection-body table tr th {
+  font-weight: bold;
+  color: #787878 !important;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  height: 60px;
+  padding: 10px !important;
+}
+.Instock {
+  background-color: rgba(0, 128, 0, 0.929);
+  width: 30%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+}
+.outOfStock {
+  background-color: rgba(159, 0, 0, 0.929);
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+}
+.imageView {
+  display: flex;
+}
+.imageHead {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  table {
+    width: 400px;
+  }
+  .Instock {
+    width: 100%;
+  }
+  .outOfStock {
+    width: 100%;
+  }
+  .imageView {
+    display: none;
+  }
+  .imageHead {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .vendor-login-container {
+    width: 350px !important;
+  }
+}
